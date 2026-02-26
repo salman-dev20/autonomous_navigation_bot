@@ -6,10 +6,8 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    # Ensure all lines below are indented 4 spaces
     pkg_path = get_package_share_directory('autonomous_navigation_bot')
     
-    # This was the line causing the IndentationError
     slam_params_path = os.path.join(pkg_path, 'config', 'my_slam_params.yaml')
 
     # 1. Spawn Robot & Gazebo
@@ -18,12 +16,11 @@ def generate_launch_description():
         launch_arguments={'use_sim_time': 'true'}.items()
     )
 
-    # 2. SLAM Toolbox
+    # 2. SLAM Toolbox (FIXED INDENTATION HERE)
     launch_slam = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             os.path.join(get_package_share_directory('slam_toolbox'), 'launch', 'online_async_launch.py')
         ]),
-        # Added the params file argument here so your config actually loads
         launch_arguments={
             'use_sim_time': 'true',
             'slam_params_file': slam_params_path
@@ -38,6 +35,7 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}]
     )
 
+    # 4. Return Launch Description (FIXED INDENTATION HERE)
     return LaunchDescription([
         launch_robot,
         launch_slam,

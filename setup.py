@@ -18,8 +18,8 @@ data_files=[
     (os.path.join('share', package_name, 'urdf'), glob('urdf/*')),
     (os.path.join('share', package_name, 'maps'), glob('maps/*')),
     (os.path.join('share', package_name, 'rviz'), glob('rviz/*')),
-    # ADD THIS LINE TO INCLUDE YOUR MAZE
-    (os.path.join('share', package_name, 'worlds'), glob('worlds/*')),
+    # Use *.world to avoid copying hidden system folders that crash the build
+    (os.path.join('share', package_name, 'worlds'), glob('worlds/*.world')),
 ],
     install_requires=['setuptools'],
     zip_safe=True,
