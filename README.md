@@ -4,7 +4,6 @@ A fully integrated autonomous mobile robot simulation featuring a custom differe
 
 ## 📺 Project Demonstration
 ![Autonomous Navigation Demo](media/nav_demo.mp4)
-*(Note: If the video does not play, ensure it is uploaded to the 'media' folder in this repository)*
 
 ---
 
