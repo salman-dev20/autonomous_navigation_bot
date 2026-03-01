@@ -7,7 +7,8 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
-        - /Map1/Status1
+        - /Map1
+        - /Map1/Update Topic1
       Splitter Ratio: 0.5
     Tree Height: 555
   - Class: rviz_common/Selection
@@ -56,7 +57,7 @@ Visualization Manager:
       Description Source: Topic
       Description Topic:
         Depth: 5
-        Durability Policy: Volatile
+        Durability Policy: Transient Local
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /robot_description
@@ -120,7 +121,7 @@ Visualization Manager:
         Value: /map
       Update Topic:
         Depth: 5
-        Durability Policy: Volatile
+        Durability Policy: Transient Local
         History Policy: Keep Last
         Reliability Policy: Best Effort
         Value: /map_updates
@@ -199,6 +200,7 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /clicked_point
+    - Class: nav2_rviz_plugins/GoalTool
   Transformation:
     Current:
       Class: rviz_default_plugins/TF
@@ -221,10 +223,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5903979539871216
+      Pitch: 0.7453979253768921
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.7553982138633728
+      Yaw: 0.4353984296321869
     Saved: ~
 Window Geometry:
   Displays:
@@ -242,5 +244,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 28
-  Y: 28
+  X: 375
+  Y: -2
