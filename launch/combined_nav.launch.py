@@ -136,10 +136,6 @@ def generate_launch_description():
         # Activate map_server after 6 seconds
         TimerAction(period=6.0, actions=[
             lifecycle_manager_map,
-        ]),
-
-        # Activate nav stack after 9 seconds
-        TimerAction(period=9.0, actions=[
             lifecycle_manager_nav,
         ]),
     ])
