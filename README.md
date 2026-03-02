@@ -3,7 +3,7 @@
 A fully integrated autonomous mobile robot simulation featuring a custom differential drive chassis, sensor fusion (LiDAR + Camera), and an optimized **Nav2** navigation stack for complex maze traversal.
 
 ## 📺 Project Demonstration
-![Autonomous Navigation Demo](nav_demo.mp4)
+![Autonomous Navigation Demo](media/nav_demo.mp4)
 
 ---
 
